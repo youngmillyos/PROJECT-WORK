@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> An Online Job Recruitment Portal</title>
+    <script src="https://kit.fontawesome.com/fe148a6a2e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/CSS Project/homepage.css">
+    <link rel="stylesheet" href="../css/CSS%20Project/footer.css">
+    <link rel="stylesheet" href="../CSS%20Project/responsive.css">
+    <link rel="icon" type="image.png" href="/image2/works.png">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img class="logo-img" src="../image2/works.png" alt="Logo">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+        </div>
+
+        <nav>
+            <a href="homepage.html" class="active">Home</a>
+            <a href="job.html">Jobs</a>
+            <a href="skills.html">Skills</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+    </header>
+
+    <!-- ================= HEADING  ================= -->
+    <main>
+        <section class="heading1">
+            <div class="container heading1-content">
+                <div class="hero-left">
+                    <p class="heading-label">STUDENT RECRUITMENT PORTAL</p>
+                    <h1>Your next opportunity<br>starts <span class="highlight-skill">here.</span></h1>
+
+                    <p class="hero-copy">Find verified internships, flexible jobs, and project work from employers who value emerging talent.</p>
+
+                    <!-- SEARCH BOX -->
+
+                    <form class="search-box" action="job.html" method="get">
+                        <input id="hero-search" name="q" type="search" placeholder="Search roles, skills, or companies...">
+                        <select id="hero-category" name="category">
+                            <option>All Categories</option>
+                            <option value="web-developer.html">Web Development</option>
+                            <option value="graphic-design.html">Graphic Design</option>
+                            <option value="writing.html">Writing</option>
+                            <option value="tutoring.html">Tutoring</option>
+                            <option value="photography-video.html">Photography & Video</option>
+                            <option value="social-media.html">Social Media</option>
+                        </select>
+                        <button type="submit">Search jobs</button>
+                    </form>
+
+                    <!-- POPULAR SEARCHES -->
+
+                    <div class="popular-searches">
+                        <span>Popular:</span>
+                        <a href="web-developer.html">Web development</a>
+                        <a href="graphic-design.html">Graphic design</a>
+                        <a href="writing.html">Writing</a>
+                        <a href="tutoring.html">Tutoring</a>
+                    </div>
+                </div>
+
+                <div class="divimg">
+                    <img class="mg" src="../my image/pic.jpeg" alt="A student working on a laptop">
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section class="works">
+            <div class="container">
+                <div class="section-heading">
+                    <p>One profile. More possibilities.</p>
+                    <h2>Everything you need to get hired</h2>
+                </div>
+
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fa-solid fa-user fa-1x" style="color: blueviolet;"></i>
+                        </div>
+                        <small>01 / PROFILE</small>
+                        <h3>Build your profile</h3>
+                        <p>Show employers what you can do with a profile that works as hard as you do.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-icon"><i class="fa-solid fa-briefcase" style="color: rgb(80, 30, 30);"></i></div>
+                        <small>02 / DISCOVER</small>
+                        <h3>Find your fit</h3>
+                        <p>Filter roles by category, location, and work style to find work that fits your life.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-icon"><i class="fa-solid fa-trophy" style="color: gold;"></i></div>
+                        <small>03 / CONNECT</small>
+                        <h3>Get hired</h3>
+                        <p>Apply with confidence, connect directly with employers, and grow your experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-opportunities">
+            <div class="container">
+                <div class="featured-heading">
+                    <div>
+                        <p class="section-kicker">START EXPLORING</p>
+                        <h2>Find work that fits your next move</h2>
+                    </div>
+                    <a class="view-all-link" href="job.html">View all jobs <span aria-hidden="true">&#8594;</span></a>
+                </div>
+
+                <div class="opportunity-grid">
+                    <a class="opportunity-card" href="web-developer.html">
+                        <span class="opportunity-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+                        <span class="opportunity-type">POPULAR CATEGORY</span>
+                        <h3>Web Development</h3>
+                        <p>Build real products and grow your portfolio with practical digital work.</p>
+                        <span class="opportunity-link">Explore roles <span aria-hidden="true">&#8594;</span></span>
+                    </a>
+
+                    <a class="opportunity-card" href="graphic-design.html">
+                        <span class="opportunity-icon"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></span>
+                        <span class="opportunity-type">CREATIVE WORK</span>
+                        <h3>Graphic Design</h3>
+                        <p>Turn strong ideas into visuals for brands, products, and growing teams.</p>
+                        <span class="opportunity-link">Explore roles <span aria-hidden="true">&#8594;</span></span>
+                    </a>
+
+                    <a class="opportunity-card" href="writing.html">
+                        <span class="opportunity-icon"><i class="fa-solid fa-feather-pointed" aria-hidden="true"></i></span>
+                        <span class="opportunity-type">FLEXIBLE WORK</span>
+                        <h3>Writing</h3>
+                        <p>Find projects where clear thinking and a thoughtful voice make an impact.</p>
+                        <span class="opportunity-link">Explore roles <span aria-hidden="true">&#8594;</span></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap fa-1x"></i> Online Job Recruitment Portal
+            </div>
+
+            <p>
+                © 2026 Online Job Recruitment Portal. Built for ambitious students and thoughtful employers.
+            </p>
+
+            <div class="site-footer-socials">
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true" color="blue"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true" color="purple"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

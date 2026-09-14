@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for a Job | Online Job Recruitment Portal</title>
+    <script src="https://kit.fontawesome.com/fe148a6a2e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/CSS%20Project/job.css">
+    <link rel="stylesheet" href="../css/CSS%20Project/application.css">
+    <link rel="stylesheet" href="../css/CSS%20Project/footer.css">
+    <link rel="stylesheet" href="../CSS%20Project/responsive.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="../image2/works.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="homepage.html">Home</a>
+            <a href="job.html">Jobs</a>
+            <a href="skills.html">Skills</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-buttons">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+    </header>
+
+    <main class="application-page">
+        <section class="application-card">
+            <p class="eyebrow">JOB APPLICATION</p>
+            <h1>Complete your application</h1>
+            <p class="application-intro">Provide your information and submit your application for review.</p>
+
+            <form id="application-form" class="application-form">
+                <div class="form-field">
+                    <label for="full-name">Full Name</label>
+                    <input id="full-name" name="fullName" type="text" required>
+                </div>
+                <div class="form-field">
+                    <label for="email-address">Email Address</label>
+                    <input id="email-address" name="email" type="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="phone-number">Phone Number</label>
+                    <input id="phone-number" name="phone" type="tel" required>
+                </div>
+                <div class="form-field">
+                    <label for="address">Address</label>
+                    <input id="address" name="address" type="text" required>
+                </div>
+                <div class="form-field">
+                    <label for="job-position">Job Position</label>
+                    <input id="job-position" name="position" type="text">
+                </div>
+                <div class="form-field">
+                    <label for="qualification">Qualification</label>
+                    <input id="qualification" name="qualification" type="text" required>
+                </div>
+                <div class="form-field">
+                    <label for="skills">Skills</label>
+                    <textarea id="skills" name="skills" rows="3" required></textarea>
+                </div>
+                <div class="form-field">
+                    <label for="experience">Work Experience</label>
+                    <textarea id="experience" name="experience" rows="4" required></textarea>
+                </div>
+                <div class="form-field">
+                    <label for="cv">Upload CV</label>
+                    <input id="cv" name="cv" type="file" accept=".pdf,.doc,.docx,image/*" required>
+                </div>
+                <div class="form-field">
+                    <label for="cover-letter">Cover Letter</label>
+                    <textarea id="cover-letter" name="coverLetter" rows="6" required></textarea>
+                </div>
+                <button class="application-submit" type="submit">Submit Application</button>
+            </form>
+            <p id="application-success" class="application-success" role="status" aria-live="polite" hidden>Your application has been submitted successfully</p>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="site-footer-content">
+            <div class="site-footer-brand"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Online Job Recruitment Portal</div>
+            <p>&copy; 2026 Online Job Recruitment Portal. Built for ambitious students and thoughtful employers.</p>
+            <div class="site-footer-socials">
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const applicationForm = document.getElementById('application-form');
+        const applicationSuccess = document.getElementById('application-success');
+
+        applicationForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            applicationForm.reset();
+            applicationSuccess.hidden = false;
+        });
+    </script>
+</body>
+</html>
