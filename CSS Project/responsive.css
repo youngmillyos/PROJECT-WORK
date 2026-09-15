@@ -1,0 +1,216 @@
+/* Shared responsive rules for the recruitment portal. */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+video,
+svg,
+iframe {
+    max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+    max-width: 100%;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 20px;
+    }
+
+    .logo {
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+
+    .logo img,
+    .logo-img {
+        width: 52px;
+        height: auto;
+    }
+
+    nav {
+        order: 3;
+        flex: 1 1 100%;
+        width: 100%;
+        justify-content: center;
+        gap: clamp(10px, 4vw, 28px);
+    }
+
+    nav a {
+        white-space: normal;
+        text-align: center;
+    }
+
+    .nav-buttons {
+        gap: 10px;
+    }
+
+    .heading1-content,
+    .candidate-tools {
+        grid-template-columns: 1fr;
+    }
+
+    .divimg {
+        order: -1;
+    }
+
+    .steps,
+    .job-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .search-box,
+    .job-search {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .application-card,
+    .contact-card,
+    .details-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        min-width: 0;
+    }
+
+    .navbar {
+        align-items: center;
+        padding: 10px 12px;
+    }
+
+    .logo img,
+    .logo-img {
+        width: 42px;
+    }
+
+    .brand-text,
+    .campus,
+    .portal {
+        font-size: 1rem;
+    }
+
+    nav {
+        justify-content: space-between;
+        gap: 6px;
+    }
+
+    nav a {
+        font-size: .78rem;
+        padding: 4px 2px;
+    }
+
+    .nav-buttons {
+        gap: 6px;
+    }
+
+    .login-btn {
+        font-size: .85rem;
+    }
+
+    .signup-btn {
+        min-width: 0;
+        padding: 8px 10px;
+        font-size: .8rem;
+    }
+
+    .container,
+    .job-container,
+    .application-page,
+    .contact-container,
+    .job-details,
+    .skills {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .heading1-content {
+        padding-top: 36px;
+        padding-bottom: 48px;
+    }
+
+    .heading1 h1,
+    .job-container h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+        line-height: 1.08;
+    }
+
+    .search-box,
+    .job-search {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .search-box input,
+    .search-box select,
+    .search-box button,
+    .job-search input,
+    .job-search select,
+    .job-search button {
+        width: 100%;
+        min-width: 0;
+        min-height: 44px;
+    }
+
+    .search-box select,
+    .job-search select {
+        border-left: 0;
+        border-top: 1px solid #d9e2e5;
+    }
+
+    .steps,
+    .job-list,
+    .application-form,
+    .skill {
+        grid-template-columns: 1fr;
+    }
+
+    .application-card,
+    .contact-card,
+    .details-card,
+    .candidate-tool,
+    .job-card {
+        padding: 20px 16px;
+    }
+
+    .signup-form,
+    .login-form {
+        width: calc(100% - 24px);
+        max-width: 420px;
+        padding-top: 40px;
+    }
+
+    .site-footer-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px 12px;
+    }
+
+    .site-footer p {
+        text-align: left;
+    }
+
+    table {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+}

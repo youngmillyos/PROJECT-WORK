@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+.application-page {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+}
+
+.application-card {
+    padding: 36px;
+    background: #fff;
+    border: 1px solid #e1e9e6;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(16, 42, 67, .07);
+}
+
+.application-card h1 {
+    margin: 8px 0 10px;
+    color: #102a43;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+}
+
+.application-intro {
+    margin-bottom: 28px;
+    color: #627d98;
+    line-height: 1.5;
+}
+
+.application-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.form-field:nth-last-of-type(1),
+.form-field:nth-last-of-type(2),
+.application-submit {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    color: #102a43;
+    font-size: .92rem;
+    font-weight: 700;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #d9e2e5;
+    border-radius: 5px;
+    background: #fff;
+    color: #102a43;
+    font: inherit;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: #8c5ef6;
+    outline: 2px solid rgba(140, 94, 246, .15);
+}
+
+.application-submit {
+    padding: 13px 20px;
+    border: 0;
+    border-radius: 5px;
+    background: #8c5ef6;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.application-submit:hover {
+    background: #7042dc;
+}
+
+.application-success {
+    margin: 22px 0 0;
+    padding: 14px 16px;
+    border: 1px solid #9ed9bd;
+    border-radius: 5px;
+    background: #edf9f1;
+    color: #176b3a;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .application-page {
+        padding: 28px 12px 48px;
+    }
+
+    .application-card {
+        padding: 22px 16px;
+    }
+
+    .application-form {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-field:nth-last-of-type(1),
+    .form-field:nth-last-of-type(2),
+    .application-submit {
+        grid-column: auto;
+    }
+}

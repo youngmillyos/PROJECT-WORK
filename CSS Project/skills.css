@@ -1,0 +1,214 @@
+ .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 24px;
+    background: #111c3b;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 78px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 180px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.logo img {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+}
+
+.brand-text {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 100;
+    color: #8c5ef6;
+    font-size: 1.25rem;
+    line-height: 1.1;
+    white-space: normal;
+    letter-spacing: -0.04em;
+}
+
+.campus {
+    color: #8c5ef6;
+    font-weight: 100;
+    margin-left: 2px;
+}
+
+nav {
+    display: flex;
+    grid-column: 2;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex: 1;
+}
+
+nav a {
+    color: #eef2ff;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1.2;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: #9a7cff;
+}
+
+.nav-buttons {
+    display: flex;
+    grid-column: 3;
+    justify-self: end;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.nav-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.login-btn {
+    padding: 8px 0;
+    color: #f5f7ff;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.signup-btn {
+    background: linear-gradient(135deg, #7d55f7, #6c3df5);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow: none;
+    min-width: 110px;
+}
+
+.signup-btn:hover {
+    background: linear-gradient(135deg, #8b68f9, #744eff);
+}
+
+.skills {
+    max-width: 1120px;
+    margin: 32px auto 64px;
+    padding: 58px;
+    background: #fff;
+    border: 1px solid #e2daf8;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(17, 28, 59, .08);
+    color: #142044;
+    text-align: left;
+}
+
+.skills-heading {
+    margin: 0;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e7e0f5;
+    color: #142044;
+    font-size: clamp(2.4rem, 6vw, 4.6rem);
+    font-weight: 900;
+}
+
+.skills-text {
+    margin: 42px 0 0;
+    color: #193d72;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 42px;
+    padding-top: 18px;
+}
+
+.skill-item {
+    display: flex;
+    min-height: 180px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 28px 0;
+    border-bottom: 1px solid #e7e0f5;
+    color: #142044;
+    text-decoration: none;
+    transition: color .2s ease, transform .2s ease;
+}
+
+.skill-item:hover {
+    color: #7042dc;
+    transform: translateX(4px);
+}
+
+.skill-item h2 {
+    margin: 0;
+    font-size: 1.35rem;
+}
+
+.skill-item p {
+    margin: 12px 0 18px;
+    color: #193d72;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.view-skills-btn {
+    display: inline-block;
+    padding: 0;
+    color: #7042dc;
+    font-size: .92rem;
+    font-weight: 700;
+}
+
+
+@media (max-width: 600px) {
+    body { overflow-x: hidden; }
+    .navbar { display: flex; flex-wrap: wrap; gap: 12px; padding: 10px 12px; }
+    .logo { min-width: 0; flex: 1 1 auto; }
+    .logo img { width: 36px; height: 36px; }
+    .brand-text, .campus { font-size: 1rem; }
+    nav { position: static; order: 3; flex: 1 1 100%; justify-content: space-between; gap: 8px; transform: none; width: 100%; }
+    nav a { font-size: .78rem; }
+    .nav-buttons { gap: 8px; }
+    .signup-btn { min-width: auto; padding: 8px 12px; }
+    .skills { margin: 20px 12px 42px; padding: 28px 20px 36px; }
+    .skills-heading { padding-bottom: 30px; }
+    .skills-text { margin-top: 28px; }
+    .skill { grid-template-columns: 1fr; padding-top: 10px; }
+}

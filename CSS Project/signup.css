@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 24px;
+    background: #111c3b;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 78px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 180px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.logo img {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 100;
+    color: #8c5ef6;
+    font-size: 1.25rem;
+    line-height: 1.1;
+    white-space: normal;
+    letter-spacing: -0.04em;
+}
+
+.campus {
+    color: #8c5ef6;
+    font-weight: 100;
+    margin-left: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex: 1;
+}
+
+nav a {
+    color: #eef2ff;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1.2;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: #9a7cff;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.nav-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.login-btn {
+    padding: 8px 0;
+    color: #f5f7ff;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.signup-btn {
+    background: linear-gradient(135deg, #7d55f7, #6c3df5);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow: none;
+    min-width: 110px;
+    text-decoration: none;
+}
+
+.signup-btn:hover {
+    background: linear-gradient(135deg, #8b68f9, #744eff);
+}
+
+.signup-form {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 80px 0 40px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2d168f;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    max-width: 420px;
+    padding: 14px 16px;
+    font-size: 1rem;
+    border: 1px solid #999;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+}
+
+input:focus {
+    border-color: #2d0ca7;
+    box-shadow: 0 0 0 3px rgba(45, 12, 167, 0.15);
+}
+
+button {
+    width: 100%;
+    max-width: 420px;
+    padding: 14px;
+    background: #2d0ca7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button:hover {
+    background: #24098d;
+}
+
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 10px 12px;
+    }
+
+    .logo {
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+
+    .logo img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .brand-text,
+    .campus {
+        font-size: 1rem;
+    }
+
+    nav {
+        order: 3;
+        flex: 1 1 100%;
+        justify-content: space-between;
+        gap: 8px;
+        width: 100%;
+    }
+
+    nav a {
+        font-size: .78rem;
+    }
+
+    .nav-buttons {
+        gap: 8px;
+    }
+
+    .signup-btn {
+        min-width: auto;
+        padding: 8px 12px;
+    }
+
+    .signup-form {
+        width: calc(100% - 24px);
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,204 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body > div {
+    flex: 1;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 24px;
+    background: #111c3b;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 78px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 180px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.logo img {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 100;
+    color: #8c5ef6;
+    font-size: 1.25rem;
+    line-height: 1.1;
+    white-space: normal;
+    letter-spacing: -0.04em;
+}
+
+.campus {
+    color: #8c5ef6;
+    font-weight: 100;
+    margin-left: 2px;
+}
+
+nav {
+    display: flex;
+    grid-column: 2;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex: 1;
+}
+
+nav a {
+    color: #eef2ff;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1.2;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: #9a7cff;
+}
+
+.nav-buttons {
+    display: flex;
+    grid-column: 3;
+    justify-self: end;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.nav-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.login-btn {
+    padding: 8px 0;
+    color: #f5f7ff;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.signup-btn {
+    background: linear-gradient(135deg, #7d55f7, #6c3df5);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow: none;
+    min-width: 110px;
+}
+
+.signup-btn:hover {
+    background: linear-gradient(135deg, #8b68f9, #744eff);
+}
+body {
+    background-color: #f5f3ff;
+}
+
+.about-page {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+}
+
+.about-card {
+    padding: 42px;
+    background: #fff;
+    border: 1px solid #e2daf8;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(17, 28, 59, .08);
+}
+
+
+
+h1.about-heading {
+    margin: 0 0 38px;
+    color: #111c3b;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 800;
+}
+
+.about-section {
+    max-width: 980px;
+    padding: 30px 0;
+    border-top: 1px solid #ece8f7;
+}
+
+.about-section h2 {
+    margin: 0 0 16px;
+    color: #111c3b;
+    font-size: clamp(1.55rem, 3vw, 2rem);
+}
+
+.about-section p {
+    margin: 0 0 16px;
+    color: #263d66;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.about-section p:last-child {
+    margin-bottom: 0;
+}
+
+.about-closing {
+    color: #7042dc !important;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    body { overflow-x: hidden; }
+    .navbar { flex-wrap: wrap; gap: 12px; padding: 10px 12px; }
+    .logo { min-width: 0; flex: 1 1 auto; }
+    .logo img { width: 36px; height: 36px; }
+    .brand-text, .campus { font-size: 1rem; }
+    .navbar { display: flex; }
+    nav { position: static; order: 3; flex: 1 1 100%; justify-content: space-between; gap: 8px; width: 100%; }
+    nav a { font-size: .78rem; }
+    .nav-buttons { gap: 8px; }
+    .signup-btn { min-width: auto; padding: 8px 12px; }
+    .container { width: 100%; padding: 0 12px; }
+    .about-page { padding: 28px 12px 48px; }
+    .about-card { padding: 26px 20px; }
+}

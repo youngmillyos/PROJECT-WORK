@@ -1,0 +1,242 @@
+﻿.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: #f6f7fb;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 24px;
+    background: #111c3b;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 78px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 180px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.logo img {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 100;
+    color: #8c5ef6;
+    font-size: 1.25rem;
+    line-height: 1.1;
+    white-space: normal;
+    letter-spacing: -0.04em;
+}
+
+.campus {
+    color: #8c5ef6;
+    font-weight: 100;
+    margin-left: 2px;
+}
+
+nav {
+    display: flex;
+    grid-column: 2;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex: 1;
+}
+
+nav a {
+    color: #eef2ff;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1.2;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: #9a7cff;
+}
+
+.nav-buttons {
+    display: flex;
+    grid-column: 3;
+    justify-self: end;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.nav-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.login-btn {
+    padding: 8px 0;
+    color: #f5f7ff;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.signup-btn {
+    background: linear-gradient(135deg, #7d55f7, #6c3df5);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow: none;
+    min-width: 110px;
+}
+
+.signup-btn:hover {
+    background: linear-gradient(135deg, #8b68f9, #744eff);
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+}
+
+.contact-card {
+    padding: 42px;
+    background: #fff;
+    border: 1px solid #e2daf8;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(17, 28, 59, .08);
+}
+
+
+.contact-us-text {
+    color: #2d168f;
+    text-align: center;
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+.contact-intro {
+    text-align: center;
+    color: #475569;
+    margin-bottom: 24px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+}
+
+label {
+    font-weight: 600;
+    color: #2d168f;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1rem;
+    border: 1px solid #d6dbe7;
+    border-radius: 10px;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #7d55f7;
+    box-shadow: 0 0 0 3px rgba(125, 85, 247, 0.12);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #2d0ca7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.submit-btn:hover {
+    background: #24098d;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2d0ca7;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    body { overflow-x: hidden; }
+    .navbar { flex-wrap: wrap; gap: 12px; padding: 10px 12px; }
+    .logo { min-width: 0; flex: 1 1 auto; }
+    .logo img { width: 36px; height: 36px; }
+    .brand-text, .campus { font-size: 1rem; }
+    .navbar { display: flex; }
+    nav { position: static; order: 3; flex: 1 1 100%; justify-content: space-between; gap: 8px; width: 100%; }
+    nav a { font-size: .78rem; }
+    .nav-buttons { gap: 8px; }
+    .signup-btn { min-width: auto; padding: 8px 12px; }
+    .contact-container { padding: 28px 12px 48px; }
+    .contact-card { padding: 26px 20px; }
+}
+
