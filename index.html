@@ -14,12 +14,18 @@
 </head>
 
 <body>
-    <header class="navbar">
+    <header class="navbar homepage-navbar">
         <div class="logo">
-            <img class="logo-img" src="image/works.png" alt="Logo">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+            <img class="logo-img" src="image/works.png" alt="Recruitment portal logo">
         </div>
 
-        <nav>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="home-navigation">
+            <span class="menu-toggle-bar"></span>
+            <span class="menu-toggle-bar"></span>
+            <span class="menu-toggle-bar"></span>
+        </button>
+
+        <nav class="home-navigation" id="home-navigation">
             <a href="index.html">Home</a>
             <a href="job.html">Jobs</a>
             <a href="skills.html">Skills</a>
@@ -172,6 +178,34 @@
         </div>
 
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const homepageNavbar = document.querySelector('.homepage-navbar');
+
+        function closeNavigation() {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Open navigation menu');
+            homepageNavbar.classList.remove('is-menu-open');
+        }
+
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+            menuToggle.setAttribute('aria-label', isExpanded ? 'Open navigation menu' : 'Close navigation menu');
+            homepageNavbar.classList.toggle('is-menu-open', !isExpanded);
+        });
+
+        homepageNavbar.querySelectorAll('nav a, .nav-buttons a').forEach((link) => {
+            link.addEventListener('click', closeNavigation);
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeNavigation();
+            }
+        });
+    </script>
 
 </body>
 

@@ -4,11 +4,18 @@
     padding: 0 20px;
 }
 
-body {
+html, body {
     margin: 0;
     padding: 0;
+    min-height: 100%;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar {
@@ -196,6 +203,53 @@ nav a:hover {
     font-weight: 700;
 }
 
+.site-footer {
+    margin-top: auto;
+    background: #111c3b;
+    border-top: 1px solid #2d4b7a;
+    color: #eef2ff;
+}
+
+.site-footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 1200px;
+    min-height: 92px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    box-sizing: border-box;
+}
+
+.site-footer-brand {
+    color: #c7d2fe;
+    font-weight: 700;
+}
+
+.site-footer p {
+    margin: 0;
+    color: #c7d2fe;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.site-footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.site-footer-socials a {
+    color: #c7d2fe;
+    font-size: 1.25rem;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.site-footer-socials a:hover {
+    color: #ffffff;
+}
 
 @media (max-width: 600px) {
     body { overflow-x: hidden; }
@@ -211,4 +265,6 @@ nav a:hover {
     .skills-heading { padding-bottom: 30px; }
     .skills-text { margin-top: 28px; }
     .skill { grid-template-columns: 1fr; padding-top: 10px; }
+    .site-footer-content { align-items: flex-start; flex-direction: column; gap: 10px; padding: 16px 12px; }
+    .site-footer p { text-align: left; }
 }

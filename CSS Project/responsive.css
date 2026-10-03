@@ -1,9 +1,21 @@
 /* Shared responsive rules for the recruitment portal. */
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html,
 body {
     max-width: 100%;
+    min-height: 100%;
     overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 img,
@@ -63,11 +75,25 @@ button {
 
     .divimg {
         order: -1;
+        width: 100%;
+        max-width: 500px;
+        flex: 0 1 auto;
+        align-self: center;
+    }
+
+    .mg {
+        width: 100%;
+        height: auto;
     }
 
     .steps,
     .job-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-page,
+    .contact-container {
+        padding-top: 32px;
     }
 
     .search-box,
@@ -133,11 +159,28 @@ button {
     .application-page,
     .contact-container,
     .job-details,
-    .skills {
+    .about-page {
         width: 100%;
         max-width: 100%;
         padding-left: 12px;
         padding-right: 12px;
+    }
+
+    .about-card,
+    .contact-card,
+    .application-card,
+    .details-card,
+    .candidate-tool,
+    .job-card,
+    .step,
+    .opportunity-card {
+        min-width: 0;
+        max-width: 100%;
+        padding: 16px clamp(14px, 4vw, 20px);
+    }
+
+    .about-section {
+        padding: 20px 0;
     }
 
     .heading1-content {
